@@ -1,0 +1,191 @@
+*{
+    font-family: 'Montserrat', sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background: #FAFAFA;
+}
+.header{
+    width: calc(100% - 3.2%*2);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin: 1.5em auto;
+}
+.titulo{
+    font-size: 1.5em;
+    font-family: 'Playfair Display', serif;
+}
+.desc{
+    display: flex;
+}
+.desc > svg{
+    flex: .06;
+    transform: rotate(90deg);
+}
+.desc > p{
+    flex: 1;
+    font-style: italic;
+    color: #4F4F4F;
+}
+header img{
+    border-radius: 1rem;
+}
+
+/* main */
+.container{
+    width: calc(100% - 3.2%*2);
+    margin: auto;
+    
+}
+.article{
+    display: grid;
+    row-gap: 1rem;
+    grid-template-areas: "primero . ."
+    "nr4 nr5 nr6";
+    grid-template-columns: auto auto auto;
+}
+.primero{
+    grid-area: primero;
+}
+#naranja{
+    color: orange;
+}
+
+.nro4{
+    grid-area: nr4;
+}
+
+.nro5{
+    grid-area: nr5;
+}
+.nro6{
+    grid-area: nr6;
+}
+
+.horas{
+    width: auto;
+    display: grid;
+    padding: .5rem;
+    grid-template-columns: .2fr 1fr;
+    grid-template-rows: auto auto;
+    column-gap: .25rem;
+}
+.horas svg{
+    grid-area: 1 / 1 / span 2 / span 1;
+    margin: auto;
+}
+.horas b{
+    grid-area: 1 / 2 / span 1 / span 1;
+    font-size: .5em;
+    color: #bdbdbd;
+}
+.horas span{
+    grid-area: 2 / 2 / span 1 / span 1;
+    font-size: .7em;
+    font-weight: 500;
+    color: #333;
+}
+
+/* Pasos */
+
+.ingredientes, .quesoTorta, .instrucciones{
+    display: grid;
+    grid-template-columns: .02fr 2fr;
+    align-content: start;
+}
+input{
+    margin-bottom: auto;
+    margin-right: 1rem;
+    width: 1rem;
+}
+.instrucciones{
+    grid-gap: 16px;
+}
+.instrucciones >.numeros{
+    padding: 15px;
+    height: 10px;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    background: #ffb662;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    justify-content: center;
+}
+h2{
+    font-family: 'Playfair Display', serif;
+    font-weight: bold;
+    font-size: 1.125em;
+    color: #333;
+    margin: 1.25rem auto;
+}
+.container p{
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-weight: 400;
+    color: #333;
+    margin: 1.25rem auto;
+}
+a{
+    color: #bdbdbd;
+    text-decoration: none;
+    font-size: 14px;
+}
+footer{
+    text-align: center;
+    width: calc(100% - 3.2%*2);
+    padding: 1rem;
+
+}
+
+@media (min-width: 768px){
+    body{
+        max-width: 978px;
+        margin: auto;
+    }
+    .titulo{
+        font-size: 3rem;
+    }
+    h2{
+        font-size: 1.5rem;
+    }
+    main p{
+        font-size: 18px;
+    }
+    .horas b{
+        font-size: 10px;
+    }
+    .horas span{
+        font-size: 14px;
+    }
+
+    .ingredientes label, .quesoTorta label{
+        font-size: 1rem;
+    }
+    a{
+        font-size: 1rem;
+    }
+    .container{
+        display: flex;
+        flex-direction: row-reverse;
+        gap: 20%;
+    }
+    .article{
+        display: flex;
+        flex-direction: column;
+        border: 1px solid #d6d6d6;
+        border-radius: 1rem;
+        height: fit-content;
+        padding: 2rem 3rem;
+        box-shadow: 0px 3px 15px #c3c3c3;
+        gap: 1rem;
+    }
+    .horas{
+        column-gap: 1rem;
+        padding: 0;
+    }
+}
